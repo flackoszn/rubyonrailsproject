@@ -1,36 +1,18 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= favicon_link_tag 'img/albero.png' %>
+  <title>Basso Legnami</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'sidebar', 'data-turbo-track': 'reload', defer: true %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-  
-  <header class="top-nav">
-    <div class="nav-left">
-      <h1><%= yield :title || 'Basso Legnami logistics' %></h1>
-    </div>
-  </header>
-
-  <div class="sidebar" id="sidebar">
-    <div class="logo">
-      <button class="toggle-button" onclick="toggleSidebar()">☰</button>
-      <%= link_to image_tag('img/logo.png', alt: 'Logo'), root_path %>
-    </div>
-  </div>
-
+  <%= render 'shared/navbar' %> <!-- Sidebar -->
   <main>
     <%= yield %>
   </main>
-
-  <script>
-    function toggleSidebar() { /* JavaScript originale */ }
-    function showSubmenu(menuId) { /* JavaScript originale */ }
-    document.addEventListener("DOMContentLoaded", function() { /* JavaScript originale */ });
-  </script>
+  <%= render 'shared/footer' %> <!-- Footer per mobile -->
 </body>
 </html>

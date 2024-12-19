@@ -1,0 +1,18 @@
+<div class="sidebar" id="sidebar">
+  <div class="logo">
+    <%= image_tag('logo.png', alt: 'Basso Legnami') %>
+  </div>
+  <ul class="menu">
+    <li><%= link_to 'Admin', root_path %></li>
+    <li><%= link_to 'Listini', listini_path %></li>
+    <li><%= link_to 'Clienti', clienti_path %></li>
+    <li><%= link_to 'Ordini', ordini_path %></li>
+    <li><%= link_to 'Stats', stats_path %></li>
+  </ul>
+</div>
+
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>

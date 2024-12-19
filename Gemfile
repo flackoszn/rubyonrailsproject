@@ -78,3 +78,5 @@ gem "devise", "~> 4.9"
 gem "activeadmin", "~> 3.2"
 
 gem 'sassc-rails'
+
+gem "simple-navigation", "~> 4.4"
